@@ -1,0 +1,44 @@
+#!/usr/bin/python
+#
+# File:       ex4
+# Author:     Robert Lopez
+#
+# Started on  Thu May 31 17:29:18 2012
+# Last-Updated Thu May 31 17:29:18 2012
+#
+# Description: Exercise 4 LPTHW2E
+#
+
+## Variable Assignments
+cars                       = 100
+space_in_a_car             = 4.0
+drivers                    = 30
+passengers                 = 90
+cars_not_driven            = cars - drivers
+cars_driven                = drivers
+carpool_capacity           = cars_driven * space_in_a_car
+average_passengers_per_car = passengers / cars_driven
+
+
+print "For today's transportation situation..."
+print "There are", cars, "cars available."
+print "There are only", drivers, "drivers available."
+print "There will be", cars_not_driven, "cars which can't be driven today."
+print "We can transport", carpool_capacity, "people today."
+print "We have", passengers, "who need to carpool today."
+print "We will put", average_passengers_per_car, "in each car."
+print
+print "The variable car_pool_capacity is not the same as carpool_capacity."
+
+## The output...
+# rlopez@rlopez ~/Programming/python/ITS python class $ ./ex4
+# For today's transportation situation...
+# There are 100 cars available.
+# There are only 30 drivers available.
+# There will be 70 cars which can't be driven today.
+# We can transport 120.0 people today.
+# We have 90 who need to carpool today.
+# We will put 3 in each car.
+#
+# The variable car_pool_capacity is not the same as carpool_capacity.
+# rlopez@rlopez ~/Programming/python/ITS python class $ 

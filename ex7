@@ -1,0 +1,35 @@
+#!/usr/bin/python
+#
+# File:       ex7
+# Author:     Robert Lopez
+#
+# Started on  Mon Jun 11 18:17:21 2012
+# Last-Updated Mon Jun 11 18:17:21 2012
+#
+# Description: Ex 7 LPtHW 2E
+#
+
+### Part One
+print "Mary had a little lamb."                   # Simple string.
+print "Its fleece was white as %s." % 'snow'      # Literal string in formated string.
+print "And everywhere that Mary went."            # Simple string.
+print "." * 10       # Q: What does this do?  A: It prints the "." character 10 times.
+
+### Part Two
+letter1 = "C"
+letter2 = "h"
+letter3 = "e"
+letter4 = "e"
+letter5 = "s"
+letter6 = "e"
+letter7 = "B"
+letter8 = "u"
+letter9 = "r"
+letter10 = "g"
+letter11 = "e"
+letter12 = "r"
+
+# Remove the comma at the end of the next line to get two lines of output from the next two lines.
+print letter1 + letter2 + letter3 + letter4 + letter5 + letter6,
+print letter7 + letter8 + letter9 + letter10 + letter11 + letter12
+

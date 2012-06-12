@@ -1,0 +1,26 @@
+#!/usr/bin/python
+#
+# File:       ex8
+# Author:     Robert Lopez
+#
+# Started on  Mon Jun 11 18:30:16 2012
+# Last-Updated Mon Jun 11 18:30:16 2012
+#
+# Description: Ex8 lpthw2e
+#
+
+# The %r will print the object representation.
+# The formatter string will print the representation (repr) of four objects.
+formatter = "%r %r %r %r"
+
+print formatter % (1, 2, 3, 4)                                 # Objects are integers
+print formatter % ("one", "two", "three", "four")              # Objects are strings
+print formatter % (True, False, False, True)                   # Objects are logical values
+print formatter % (formatter, formatter, formatter, formatter) # Objects are variable value.
+print formatter % (
+    "I had this thing.",
+    "That you could type up right.",
+    "But it didn't sing.",
+    "So I said \"Goodnight\"."                                     # Objects are long strings.
+)
+# Output of above had to use double quotes around a string that contained a literal single quote character.

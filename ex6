@@ -1,0 +1,35 @@
+#!/usr/bin/python
+#
+# File:       ex6
+# Author:     Robert Lopez
+#
+# Started on  Mon Jun 11 17:59:28 2012
+# Last-Updated Mon Jun 11 17:59:28 2012
+#
+# Description: Ex6 LpTHw e2
+#
+
+### Global Variable Assignments
+binary = "binary"
+do_not = "don't"
+hilarious = False
+# Vars includes format specification.
+x = "In this world, there are %d types of people." % 10  
+y = "Those who know %s and those who %s." % (binary, do_not)
+jokeq = "Isn't this joke funny?! %r"
+
+## The output
+print x
+print y
+print "I said: %r." % x                 # 1
+print "I also said: '%s'." % y          # 2
+print jokeq % hilarious                 # 3
+
+### String Theory
+w = "This is the left side of a string"
+e = " and this is right side of a concatenated string."
+# String concatenation
+print w + e                             # 4
+
+# A string name is a string. Value assigned it a string could be considered a string in a string.
+# A format string is a string. Printing with one is a string in a string.

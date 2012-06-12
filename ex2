@@ -1,0 +1,22 @@
+#!/usr/bin/python
+#
+# File:       ex2
+# Author:     Robert Lopez
+#
+# Started on  Thu May 31 16:33:48 2012
+# Last-Updated Thu May 31 16:33:48 2012
+#
+# Description: Exercise 2 from LPTHW 2nd E
+#
+
+print "I could have code like this." # and the comment after is ignored
+
+# You can also use a comment to "disable" or comment out a piece of code:
+# print "This won't run."
+
+print "This will run."
+
+# The output:
+# ./ex2
+# I could have code like this.
+# This will run.

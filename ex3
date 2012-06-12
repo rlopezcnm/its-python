@@ -1,0 +1,77 @@
+#!/usr/bin/python
+#
+# File:       ex3
+# Author:     Robert Lopez
+#
+# Started on  Thu May 31 16:36:29 2012
+# Last-Updated Thu May 31 16:36:29 2012
+#
+# Description: Exercise 3 from LPTHW2E
+#
+
+# The next line prints a header string.
+print "I will now count my ducks:"
+
+# The next two lines each print a label and a math result
+print "Ducks", 25 + 30 / 6
+print "Drakes", 100 - 25 * 3 % 4
+
+# Yawn.  Sorry more math.
+print "Now I will count the eggs:"
+print "3 + 2 + 1 - 5 + 4 % 2 - 1 / 4 + 6"
+print "3 + 2 + 1 - 5 + (4 % 2) - (1 / 4) + 6"
+print "3 + 2 + 1 - 5 +    0    -    0    + 6"
+print 3 + 2 + 1 - 5 + 4 % 2 - 1 / 4 + 6
+
+# The next line prints a 'blank' line
+print
+# This could be more organized
+print 'Q: ',
+print "Is it true that 3 + 2 < 5 - 7?"
+print 'A: ',
+print 3 + 2 < 5 - 7
+
+# This could be yet again more organized
+print "Q: What is 3 + 2?   A: ", 3 + 2
+print "Q: What is 5 - 7?   A: ", 5 - 7
+print "Oh, that's why it's False."
+
+# This could be yet again more organized
+print "How about some more."
+print "Q: Is 5 greater than negative two?               A: ", 5 > -2
+print "Q: Is 5 greater than or equal to  negative two?  A: ", 5 >= -2
+print "Q: Is 5 less or equal to negative 2?             A: ", 5 <= -2
+
+print
+# Now for some 'wrong' math
+print "This would generate a math error:           'What is 9 divided by 2?'     A: ",  9 / 2
+# Now for some 'floating point' math
+print 'This would generate a floating point answer: "What is 9.0 divided by 2?"  A: ', 9.0 / 2 
+print "What is 9 divided by 2?   A: ",  9.0 / 2 
+
+
+
+# The output:
+# rlopez@rlopez ~/Programming/python/ITS python class $ ./ex3
+# I will now count my ducks:
+# Ducks 30
+# Drakes 97
+# Now I will count the eggs:
+# 3 + 2 + 1 - 5 + 4 % 2 - 1 / 4 + 6
+# 3 + 2 + 1 - 5 + (4 % 2) - (1 / 4) + 6
+# 3 + 2 + 1 - 5 +    0    -    0    + 6
+# 7
+
+# Q:  Is it true that 3 + 2 < 5 - 7?
+# A:  False
+# Q: What is 3 + 2?   A:  5
+# Q: What is 5 - 7?   A:  -2
+# Oh, that's why it's False.
+# How about some more.
+# Q: Is 5 greater than negative two?               A:  True
+# Q: Is 5 greater than or equal to  negative two?  A:  True
+# Q: Is 5 less or equal to negative 2?             A:  False
+
+# This would generate a math error:           'What is 9 divided by 2?'     A:  4
+# This would generate a floating point answer: "What is 9.0 divided by 2?"  A:  4.5
+# What is 9 divided by 2?   A:  4.5

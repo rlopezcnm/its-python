@@ -1,0 +1,51 @@
+#!/usr/bin/python
+#
+# File:       ex5
+# Author:     Robert Lopez
+#
+# Started on  Mon Jun 11 17:35:47 2012
+# Last-Updated Mon Jun 11 17:35:47 2012
+#
+# Description: Ex5 LPTHW 2nd
+#
+
+my_name = 'Robert Lopez'
+my_age = 61     # not a lie
+my_height = 68  # inches
+my_weight = 195 # lbs
+my_eyes = 'Brown'
+my_teeth = 'stained'
+my_hair = 'Gray'
+
+print "Let's talk about %s." % my_name
+print "He's %d inches tall." % my_height
+print "He's %d pounds heavy." % my_weight
+print "Actually that's too heavy."
+print "He's got %s eyes and %s hair." % (my_eyes, my_hair)
+print "His teeth are usually %s depending on the coffee and tea." % my_teeth
+print "If I add %d, %d, and %d I get %d." % (my_age, my_height, my_weight, my_age + my_height + my_weight)
+
+print ""
+
+name = 'Zepol Trebor'
+age = 61
+height = 69
+weight = 175
+eyes = 'Brown'
+teeth = 'Ivory'
+hair = 'Salt and Pepper'
+
+print "Let's talk about %s." % name
+print "He's %d inches tall." % height
+in2cm = 2.54
+heightcm = height * in2cm
+print "He's %d cm tall." % heightcm
+print "Obviously, he is taller in a metric world."
+print "He's %d pounds heavy." % weight
+lbs2K = 2.2
+weightK = weight / lbs2K
+print "Actually %d Kilograms is heavy." % weightK
+print "Really, %r Kilograms looks a lot heavier." % weightK
+print "He's got %s eyes and %s hair." % (eyes, hair)
+print "His teeth are usually %s depending on the coffee and tea." % teeth
+print "If I add %d, %d, and %d I get %d." % (age, height, weight, age + height + weight)
