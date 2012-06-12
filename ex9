@@ -1,0 +1,25 @@
+#!/usr/bin/python
+#
+# File:       ex9
+# Author:     Robert Lopez
+#
+# Started on  Tue Jun 12 10:17:30 2012
+# Last-Updated Tue Jun 12 10:17:30 2012
+#
+# Description: Ex9 LPTHW2e
+#
+
+days = "Mon Tue Wed Thu Fri Sat Sun"
+months = "Jan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug"
+
+print "Here are the days: ", days
+print "Here are the months: ", months
+
+print """
+There's something going on here.
+With the three double-quotes.
+We'll be able to type as much as we like.
+Even 4 lines if we want, or 5, or 6.
+"""
+
+# My mistakes: I mispelled double-quotes as double quotes.

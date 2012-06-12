@@ -1,0 +1,44 @@
+#!/usr/bin/python
+#
+# File:       ex11
+# Author:     Robert Lopez
+#
+# Started on  Tue Jun 12 10:45:01 2012
+# Last-Updated Tue Jun 12 10:45:01 2012
+#
+# Description: ex11LPTHWe2
+#
+
+### Almost literal
+print "How old are you?",
+age = raw_input()
+
+print "How tall are you?",
+height = raw_input()
+
+print "How much do you weigh?",
+weight = raw_input()
+
+print "So, you're %r old, %r tall and %r heavy." % (
+    age, height, weight)
+
+### Changed up
+
+age = raw_input("How old are you? ")
+height = raw_input("How tall are you? ")
+weight = raw_input("How much do you weigh? ")
+
+print "So, you're %r old, %s tall and %r heavy." % (
+    age, height, weight)
+
+print """
+
+The function raw_input() when passed a string, will print the string 
+(without any trailing newline character) to the standard out;
+reads from the standard input,
+converts the input (assuming it is syntactically correct) to a string,
+and record it in a variable;
+and return the string variable.
+It may use a readline module (if it is loaded) to provide the user 
+with line editing while typing.
+"""

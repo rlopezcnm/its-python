@@ -1,0 +1,43 @@
+#!/usr/bin/python
+#
+# File:       ex10
+# Author:     Robert Lopez
+#
+# Started on  Tue Jun 12 10:23:16 2012
+# Last-Updated Tue Jun 12 10:23:16 2012
+#
+# Description: ex10LPTHW2e
+#
+
+tabby_cat = "\tI'm tabbed in."
+persian_cat = "I'm split\non a line."
+backslash_cat = "I'm \\ a \\ cat."
+
+fat_cat = """
+I'll do a list:
+\t* Cat food
+\t* Fishies
+\t* Catnip\n\t* Grass
+"""
+
+skinny_cat = '''
+So she told me "Please get that starving cat out of the git tree!"
+I did it.
+I told her:\n"I got that solid muscle cat out of that thorny git tree."
+"Look at all my bleeding scratches!"
+'''
+
+par_one = """
+This use of the \ (back-slash) character is a way we can put difficult-to-type characters into a string. There are plenty of these "escape sequences" available for different characters you might want to put in, but there's a special one, the double back-slash which is just two of them \\. These two characters will print just one back-slash. We'll try a few of these sequences so you can see what I mean.
+"""
+
+print tabby_cat
+print persian_cat
+print backslash_cat
+print fat_cat
+print
+print skinny_cat
+print
+print 'Do you like this paragraph: %r' % par_one
+print
+print 'Or do you like this paragraph: %s' % par_one
