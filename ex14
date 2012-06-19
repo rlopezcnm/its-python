@@ -1,0 +1,55 @@
+#!/usr/bin/python
+#
+# File:       ex14
+# Author:     Robert Lopez
+#
+# Started on  Wed Jun 13 16:51:09 2012
+# Last update Wed Jun 13 17:01:05 2012 Robert Lopez
+#
+# Description: ex14 lpthw2e
+#
+
+from sys import argv
+
+script, user_name = argv
+prompt = '> '
+
+print "Hi %s, I'm the %s script." % (user_name, script)
+print "I'd like to ask you a few questions."
+print "Do you like me %s?" % user_name
+likes = raw_input(prompt)
+
+print "Where do you live %s?" % user_name
+lives = raw_input(prompt)
+
+print "What kind of computer do you have?"
+computer = raw_input(prompt)
+
+print """
+Alright, so you said %r about liking me.
+You live in %r.  Not sure where that is.
+And you have a %r computer.  Nice.
+""" % (likes, lives, computer)
+
+### Output
+# rlopez@rlopez ~/Programming/python/ITS_python_class/its-python $ ./ex14 Zend
+# Hi Zend, I'm the ./ex14 script.
+# I'd like to ask you a few questions.
+# Do you like me Zend?
+# > No
+# Where do you live Zend?
+# > None of your business.
+# What kind of computer do you have?
+# > Know thy self
+
+# Alright, so you said 'No' about liking me.
+# You live in 'None of your business.'.  Not sure where that is.
+# And you have a 'Know thy self' computer.  Nice.
+
+### Find out what Zork and Adventure were. Try to find a copy and play it.
+## Ok, I will try to find my paper tape. Oh no, I got rid of it when I sold the Teletype terminal.
+
+## prompt = '? '
+
+## Yea, yea, yea (combined a """ style multi-line string with the % format activator as the last print.)
+

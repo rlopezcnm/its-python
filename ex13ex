@@ -1,0 +1,76 @@
+#!/usr/bin/python
+#
+# File:       ex13ex
+# Author:     Robert Lopez
+#
+# Started on  Wed Jun 13 16:24:24 2012
+# Last update Wed Jun 13 16:49:07 2012 Robert Lopez
+#
+# Description: Ex13 lpthw2e Extra
+#
+
+import sys
+
+def usage():
+    print "Usage: %s <number>" %(sys.argv[0])
+    print '''\
+This program "guesses" the number given to it. (Want to buy a bridge?)
+Any integer or floating point number may be given.
+Options include:
+  --version : Insults the user.
+  --help    : Display this so called help.
+'''
+    sys.exit(-2)
+    return;
+
+if len(sys.argv) != 2: 
+    usage()
+
+if sys.argv[1].startswith('--'):
+    option = sys.argv[1][2:]          # sys.argv[1] without the '--'
+    if option == 'version':
+        print 'You expect an exercise program to have a version? Get real!'
+        sys.exit()
+    elif option == 'help':
+        usage()
+    else:
+        print '\nUnknown option, --%s.\n' % (option)
+        usage()
+    
+number = sys.argv[1]
+
+### The following block suddenly stopped working. It all works in interpreter.
+##  To add insult to injury, see farther below.
+# if isinstance(number, int):
+#     print 'I have guessed your number to be %s' % (number)
+# elif isinstance(number, float):
+#     print 'I have guessed your number to be %f' % (number)
+# else:
+#     print 'I have guessed "your number" to be %r' % (number)
+
+try:
+    intnumber = int(number)
+    print 'I have guessed your number to be %s' % (intnumber)
+    exit()
+except ValueError:
+    pass
+
+try:
+    floatnumber = float(number)
+    print 'I have guessed your number to be %f' % (floatnumber)
+    exit()
+except ValueError:
+    pass
+
+print "You think you are cute don't you? I'll play along stupid."
+print 'I have guessed "your number" to be %r' % (number)
+nnumber = raw_input("Now please give me an actual number: ")
+print 'New number is %r' % (nnumber)
+if isinstance(nnumber, int):
+    print 'I have guessed your number to be %s' % (nnumber)
+elif isinstance(nnumber, float):
+    print 'I have guessed your number to be %f' % (nnumber)
+
+print "Bye!"
+sys.exit(0)
+

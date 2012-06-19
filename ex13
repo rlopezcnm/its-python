@@ -1,0 +1,48 @@
+#!/usr/bin/python
+#
+# File:       ex13
+# Author:     Robert Lopez
+#
+# Started on  Tue Jun 12 17:08:41 2012
+# Last update Tue Jun 12 17:22:39 2012 Robert Lopez
+#
+# Description: ex13 lpthw2e
+#
+
+from sys import argv
+
+script, first, second, third = argv
+
+print "The script is called:", script
+print "Your first variable is:", first
+print "Your second variable is:", second
+print "Your third variable is:", third
+
+
+### Execution
+## As it is supposed to be.
+# rlopez@rlopez ~/Programming/python/ITS_python_class/its-python $ ./ex13 one two three
+# The script is called: ./ex13
+# Your first variable is: one
+# Your second variable is: two
+# Your third variable is: three
+
+## Too few args supplied when three are expected...
+# rlopez@rlopez ~/Programming/python/ITS_python_class/its-python $ ./ex13
+# Traceback (most recent call last):
+#   File "./ex13", line 14, in <module>
+#     script, first, second, third = argv
+# ValueError: need more than 1 value to unpack
+
+## Too many args supplied when three are expected...
+# rlopez@rlopez ~/Programming/python/ITS_python_class/its-python $ ./ex13 one two three what are we fighting four
+# Traceback (most recent call last):
+#   File "./ex13", line 14, in <module>
+#     script, first, second, third = argv
+# ValueError: too many values to unpack
+
+# rlopez@rlopez ~/Programming/python/ITS_python_class/its-python $ ./ex13 remember modules modules
+# The script is called: ./ex13
+# Your first variable is: remember
+# Your second variable is: modules
+# Your third variable is: modules
