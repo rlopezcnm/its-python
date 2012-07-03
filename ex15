@@ -1,0 +1,143 @@
+#!/usr/bin/python
+#
+# File:       ex15
+# Author:     Robert Lopez
+#
+# Started on  Tue Jun 19 12:27:07 2012
+# Last update Tue Jun 19 13:21:07 2012 Robert Lopez
+#
+# Description: Ex15 lpthw2e
+# Data File:   ex15.txt
+
+
+# Get one module from one library
+from sys import argv
+
+# Parse argv which expects one argument, the file to print out.
+script,filename = argv
+
+# Open the text data file
+txt = open(filename)
+
+# Parrot out the filename
+print "Here's your file %r:" % filename
+
+# Print out the file
+print txt.read()
+
+# Close open file
+txt.close()
+
+# Boring, I bean Prompt for the file name again.
+print "Sorry I forgot where I am, please type the filename again:"
+
+# Read in the name of the file again.
+# If a program is to deal with only one file it is best to use argv.
+# If a program is to deal with reading a subsequent file it is best to use raw_input.
+file_again = raw_input("> ")
+
+# Open, for read, the file again.
+txt_again = open(file_again)
+
+# Print out the file again.
+print txt_again.read()
+
+# Close open file
+txt_again.close()
+
+
+
+### pydoc
+# The pydoc program is a brain damaged program.
+# It will only look for the string given to it as it's only argument in the current directory 
+#    if the string ends in '.py' or if it is given the path.
+# When run against this file ('pydoc ./ex15') it dumps this file up to the point of reading raw input:
+# rlopez@rlopez ~/Programming/python/ITS_python_class/its-python $ pydoc ./ex15
+# Here's your file './ex15':
+# #!/usr/bin/python
+# #
+# # File:       ex15
+# # Author:     Robert Lopez
+# #
+# # Started on  Tue Jun 19 12:27:07 2012
+# # Last update Tue Jun 19 12:51:16 2012 Robert Lopez
+# #
+# # Description: Ex15 lpthw2e
+# # Data File:   ex15.txt
+
+
+# ### Get one module from one library
+# from sys import argv
+
+# ### Parse argv which expects one argument, the file to print out.
+# script,filename = argv
+
+# ### Open the text data file
+# txt = open(filename)
+
+# ### Parrot out the filename
+# print "Here's your file %r:" % filename
+
+# ### Print out the file
+# print txt.read()
+
+# ### Boring, I bean Prompt for the file name again.
+# print "Sorry I forgot where I am, please type the filename again:"
+
+# ### Read in the name of the file again.
+# file_again = raw_input("> ")
+
+# ### Open, for read, the file again.
+# txt_again = open(file_again)
+
+# ### Print out the file again.
+# print txt_again.read()
+
+# Sorry I forgot where I am, please type the filename again:
+# > 
+
+### Note here the suppied string was the name of the text file (ex15.txt), not the script file (ex15).
+# Then is produces pretty print output more similar to what it produces on a python builtin object:
+# Help on module ex15:
+
+# NAME
+#     ex15
+
+# FILE
+#     /home/rlopez/Programming/python/ITS_python_class/its-python/ex15c
+
+# DESCRIPTION
+#     # File:       ex15
+#     # Author:     Robert Lopez
+#     #
+#     # Started on  Tue Jun 19 12:27:07 2012
+#     # Last update Tue Jun 19 13:08:05 2012 Robert Lopez
+#     #
+#     # Description: Ex15 lpthw2e
+#     # Data File:   ex15.txt
+
+# DATA
+#     argv = ['/usr/bin/pydoc', './ex15']
+#     file_again = 'ex15.txt'
+#     filename = './ex15'
+#     script = '/usr/bin/pydoc'
+#     txt = <open file './ex15', mode 'r'>
+#     txt_again = <open file 'ex15.txt', mode 'r'>
+
+# (END)
+
+### Above, where did the "ex15c" come from?
+
+### After exiting the pager used for the above, it dumps out more strings:
+# ### Open, for read, the file again.
+# txt_again = open(file_again)
+
+# ### Print out the file again.
+# print txt_again.read()
+
+# Sorry I forgot where I am, please type the filename again:
+# > ex15.txt
+# This is stuff I copied that someone else wrote into a file.
+# This is stuff; just plain old stuff.
+# Lots and lots of fun to have in this text file.
+

@@ -1,0 +1,79 @@
+#!/usr/bin/python
+#
+# File:       ex16
+# Author:     Robert Lopez
+#
+# Started on  Thu Jun 21 14:28:55 2012
+# Last update Thu Jun 21 15:32:54 2012 Robert Lopez
+#
+# Description: ex16 lpthw2e
+#
+
+from sys import argv    # These two lines ate a lot of time. It seems if sys is imported
+import sys              # all of it is imported, put this line will not work on it's own.
+
+def usage():
+    print "Usage: %s <filename>" %(sys.argv[0])
+    print '''\
+This program replaces the content of the file (filename) given to it.
+It opens the file, truncates the contents, and then asks for three
+new lines to be inserted into the file.
+Options include:
+  --help    : Display this information.
+'''
+    sys.exit(-2)
+    return;
+
+if len(sys.argv) != 2: 
+    usage()
+    sys.exit(-2)
+
+if sys.argv[1].startswith('--'):
+    option = sys.argv[1][2:]          # sys.argv[1] without the '--'
+    if option == 'help':
+        usage()
+        sys.exit(-2)
+    else:
+        print '\nUnknown option, --%s.\n' % (option)
+        usage()
+        sys.exit(-2)
+
+filename = sys.argv[1]
+
+try:
+    with open(filename) as tmp: pass
+except IOError as err:
+    print "Error. File %s does not exist in this directory. Exiting." % (filename)
+    sys.exit(-2)
+
+print "I am going to replace %r." % filename
+print "If you don't want that, hit CTRL-C (^C)."
+print "If you do want that, hit RETURN."
+
+raw_input("?")
+
+print "Opening the file..."
+target = open(filename, 'w')        # Open for write truncating the file if it already exists.
+                                    # w and w+ both truncate the existing file.
+
+print "Truncating the file.  Goodbye!"
+target.truncate()
+
+print "Now I'm going to ask you for three lines."
+
+line1 = raw_input("line 1: ")
+line2 = raw_input("line 2: ")
+line3 = raw_input("line 3: ")
+
+print "I'm going to write those three new lines to the file."
+
+# target.write(line1)
+# target.write("\n")
+# target.write(line2)
+# target.write("\n")
+# target.write(line3)
+# target.write("\n")
+target.write("%s\n%s\n%s\n" % (line1, line2, line3))
+
+print "And finally, I am closing the file."
+target.close()
