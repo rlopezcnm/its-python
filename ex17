@@ -1,0 +1,66 @@
+#!/usr/bin/python
+#
+# File:       ex17
+# Author:     Robert Lopez
+#
+# Started on  Thu Jun 21 15:35:09 2012
+# Last update Tue Jul  3 12:57:30 2012 Robert Lopez
+#
+# Description: ex17 lpthw2e
+#
+
+from sys import argv
+import sys
+from os.path import exists
+
+def usage():
+    print "Usage: %s <input-filename> <output-filename>" %(sys.argv[0])
+    print '''\
+This program copies the content of the input-file to the output-file.
+Options include:
+  --help    : Display this information.
+'''
+    sys.exit(-2)
+    return;
+
+if sys.argv[1].startswith('--'):
+    option = sys.argv[1][2:]          # sys.argv[1] without the '--'
+    if option == 'help':
+        usage()
+        sys.exit(-2)
+    else:
+        print '\nUnknown option, --%s.\n' % (option)
+        usage()
+        sys.exit(-2)
+
+if len(sys.argv) != 3: 
+    usage()
+    sys.exit(-2)
+
+script, from_file, to_file = argv
+
+print "Copying from %s to %s" % (from_file, to_file)
+
+# we could do these two on one line too, how?
+input = open(from_file)
+indata = input.read()
+
+# try:
+#     with open(filename) as tmp: pass
+# except IOError as err:
+#     print "Error. File %s does not exist in this directory. Exiting." % (filename)
+#     sys.exit(-2)
+
+print "The input file is %d bytes long" % len(indata)
+
+print "Does the output file exist? %r" % exists(to_file)
+print "Ready, hit RETURN to continue, CTRL-C to abort."
+raw_input()
+
+output = open(to_file, 'w')
+output.write(indata)
+
+print "Alright, all done."
+
+output.close()
+input.close()
