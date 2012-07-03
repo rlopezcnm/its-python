@@ -1,0 +1,55 @@
+#!/usr/bin/python
+#
+# File:       ex18
+# Author:     Robert Lopez
+#
+# Started on  Tue Jul 03 13:17:15 2012
+# Last update Tue Jul  3 13:49:16 2012 Robert Lopez
+#
+# Description: ex19 lpthw2e
+#              Introducing functions.
+#
+
+### Function Check List 
+## Declaration
+# Definition starts with 'def'.
+# Name has only number characters, letter characters, and the underscore character.
+# Function name followed immediately by "(".
+# Function arguments within parenthesis and separated by comma(s).
+# Function arguments must be unique.
+# Function arguments followed immediately by "):".
+# All lines of function (after declaration) must be indented by exactly 4 spaces.
+# After the function the code is not indented (dedenting).
+## Application
+# Called by name.
+# Arguments passed in parenthesis.
+# Arguments separated by commas.
+
+# "To 'run', 'call', or 'use' a function all mean the same thing."
+# "To 'run', 'call', or 'use' a function all mean the same thing."
+# "To 'run', 'call', or 'use' a function all mean the same thing."
+# "To 'run', 'call', or 'use' a function all mean the same thing."
+
+### Function declarations
+# This function is like the scripts with argv
+def print_two(*args):
+    arg1, arg2 = args                    # Unpack the args (required by *args)
+    print "Function 'print_two' ::       arg1: %r, arg2: %r" % (arg1, arg2)
+
+# Now observe that *args is actually careless, it may be more exacting
+def print_two_again(arg1, arg2):
+    print "Function 'print_two_again' :: arg1: %r, arg2: %r" % (arg1, arg2)
+
+# This function just takes one argument
+def print_one(arg1):
+    print "Function 'print_one' ::       arg1: %r" % arg1
+
+# This function takes no arguments
+def print_none():
+    print "Function 'print_none' ::            'I got nothin'."
+
+### Exercise code 
+print_two("Zed","Shaw")
+print_two_again("Zed","Shaw")
+print_one("First!")
+print_none()
