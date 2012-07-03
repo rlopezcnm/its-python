@@ -1,0 +1,39 @@
+#!/usr/bin/python
+#
+# File:       ex19
+# Author:     Robert Lopez
+#
+# Started on  Tue Jul 03 13:52:14 2012
+# Last update Tue Jul  3 13:57:15 2012 Robert Lopez
+#
+# Description: ex19 lpthw2e
+# Variables in function are not within same scope as variables in script.
+#
+
+
+### Function Declarations
+def cheese_and_crackers(cheese_count, boxes_of_crackers):
+    print "You have %d cheeses!" % cheese_count
+    print "You have %d boxes of crackers!" % boxes_of_crackers
+    print "Man that's enough for a party!"
+    print "Get a blanket.\n"
+
+# Pass literal values to a function.
+print "We can just give the function numbers directly:"
+cheese_and_crackers(20, 30)
+
+# Assign values to variables to be passed to a function.
+print "OR, we can use variables from our script:"
+amount_of_cheese = 10
+amount_of_crackers = 50
+
+# Pass variables to a function.
+cheese_and_crackers(amount_of_cheese, amount_of_crackers)
+
+# Calculate literal values to be passed to the function
+print "We can even do math inside too:"
+cheese_and_crackers(10 + 20, 5 + 6)
+
+# Calculate literal values to be passed to the function using variables
+print "And we can combine the two, variables and math:"
+cheese_and_crackers(amount_of_cheese + 100, amount_of_crackers + 1000)
