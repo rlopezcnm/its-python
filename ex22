@@ -1,0 +1,75 @@
+#!/usr/bin/python
+#
+# File:       ex22
+# Author:     Robert Lopez
+#
+# Started on  Tue Jul 03 15:42:22 2012
+# Last update Fri Jul  6 17:37:22 2012 Robert Lopez
+#
+# Description: ex22 lpthw2e
+#              So far
+#
+
+print print statement
+""    double quotes used in print 
+''    single quotes used in print
+'    apostrophy in string
+\'   quote apostrophy in string
+\"   quote quote in string
++    add
+-    substract
+*    multiply
+/    divide
+%    modulo based 10 
+()   force math evaluation
+<    less than truth evaluation
+=    variable assignment
+%    identify print variable value
+%()  identify print variable list value 
+%s   print format
+%d   print format
+%r   print format
+True   Logical Truth
+False  Logical Not Truth
+*    print times occurance
++    print concantenation of variables
+,    print concatenetion new line suppression
+\n   print newline
+"""\ print block begin
+"""  print block end
+\t   print tab
+\\   print \
+raw_input()    read raw stdin
+4spaces        new line indent multiple print lines
+from <package> import <feature>
+from sys import argv
+=    unpack list   [ a, b, d, d = argv ]
+import sys
+def function()
+4spaces        new line indent multiple function declaration lines
+blank-line     end function declaration (actually return to no indent)
+sys.argv[0]    script name
+sys.exit()     program exit
+exit()         program exit
+return;        function return default
+len()          string length
+len(sys.argv)  count of list elements
+sys.argv[1].startswith('--'):     test chars in argv element
+if             logical test
+elif           logical test
+else:          logical test
+!=             logical evalution
+try:           test evaluation block
+except ValueError: text evaluation error
+pass           test evaluation pass and continue
+open()         open a file [ for default read ] return handle
+txt.read()     read from "txt" handle
+txt.close()    close file with "txt" handle
+open(filename, 'w')  Open for write truncating the file if it already exists.
+target.truncate()    Truncate file with handle "target"
+from os.path import exists
+output.write(indata)     Write to output handle value of indata variable.
+print f.read()           print what is read from file handle "f"
+f.seek(0)                seek to offset 0 (BOF) of file handle "f"
+return <statement>       Return evaluation of statement (end of function)
+( ( ( ( ))))             function evaluation

@@ -1,0 +1,78 @@
+#!/usr/bin/python
+#
+# File:       ex20
+# Author:     Robert Lopez
+#
+# Started on  Tue Jul 03 14:35:38 2012
+# Last update Tue Jul  3 15:14:18 2012 Robert Lopez
+#
+# Description: ex20 lpthw2e
+#              Functions and Files
+#
+
+
+# I need argv please
+from sys import argv
+
+# Unpack the argument vector, argv
+script, input_file = argv
+
+### Function Declarations
+# Print all of a file using read
+def print_all(f):
+    print f.read()
+
+# Seek back to the 0th byte offset from the (default) beginning of the file. "seek(0, 0)"
+def rewind(f):
+    f.seek(0)
+
+# Print a particular line (the line counth line) in a file.
+def print_a_line(line_count, f):
+    print line_count, f.readline()
+
+# Open a file (default for read) and return a file object which is a reference to the file.
+current_file = open(input_file)
+
+# Declare what is to follow.
+print "First let's print the whole file:\n"
+
+# Print all of the content of current_file (the content of the file referenced is read).
+print_all(current_file)
+
+# Declare what is to follow.
+print "Now let's rewind, kind of like a tape."
+
+# Seek back to the beginning of the file.
+rewind(current_file)
+
+# Declare what is to follow.
+print "Let's print three lines:"
+
+# Set a current line pointer and print that line from the file referenced.
+current_line = 1
+print_a_line(current_line, current_file)
+
+### This is the original block which worked fine
+# # Reset a current line pointer and print that line from the file referenced.
+# current_line = current_line + 1
+# print_a_line(current_line, current_file)
+#
+# # Reset a current line pointer and print that line from the file referenced.
+# current_line = current_line + 1
+# print_a_line(current_line, current_file)
+
+### Suprising, this is invalid syntax...
+# Increment the current line pointer and print that line from the file referenced.
+# print_a_line(current_line += 1 , current_file)
+#
+#  Increment the current line pointer and print that line from the file referenced.
+# print_a_line(current_line += 1 , current_file)
+
+# Reset a current line pointer and print that line from the file referenced.
+current_line += 1
+print_a_line(current_line, current_file)
+
+# Reset a current line pointer and print that line from the file referenced.
+current_line += 1
+print_a_line(current_line, current_file)
+

@@ -1,0 +1,54 @@
+#!/usr/bin/python
+#
+# File:       ex21
+# Author:     Robert Lopez
+#
+# Started on  Tue Jul 03 15:24:25 2012
+# Last update Tue Jul  3 15:37:19 2012 Robert Lopez
+#
+# Description: ex21 lpthw2e
+#              Functions can return something
+#
+
+### Function declarations
+# Add only two numbers
+def add(a, b):
+    print "ADDING %d + %d" % (a, b)
+    return a + b
+
+# Subtract the second of two numbers from the first
+def subtract(a, b):
+    print "SUBTRACTING %d - %d" % (a, b)
+    return a - b
+
+# Multiply only two numbers
+def multiply(a, b):
+    print "MULTIPLYING %d * %d" % (a, b)
+    return a * b
+#  Divide the first of two numbers by the second
+def divide(a, b):
+    print "DIVIDING %d / %d" % (a, b)
+    return a / b
+
+# Declare what will happen next
+print "Let's do some math with just functions!"
+
+# Use the functions and assign the returned values to variables
+age = add(30, 5)
+height = subtract(78, 4)
+weight = multiply(90, 2)
+iq = divide(100, 2)
+
+# Print the calculated information
+print "Age: %d, Height: %d, Weight: %d, IQ: %d" % (age, height, weight, iq)
+
+
+# Declare what will happen next
+# A puzzle for the extra credit, type it in anyway.
+print "Here is a puzzle."
+
+# Passing the value returned by a function directly to another function (almost first class).
+what = add(age, subtract(height, multiply(weight, divide(iq, 2))))
+
+# Gloat
+print "That becomes: ", what, "Can you do it by hand?"
